@@ -44,7 +44,7 @@ public class NoteDAO {
         return (ArrayList<Note>) query.getResultList();
     }
 
-    public  Note getFindById(Long id)
+     public  Note getFindById(Long id)
     {
         Query query = sessionFactory.getCurrentSession().createQuery("FROM Note WHERE id=:id")
                 .setLong("id",id);
